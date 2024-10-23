@@ -42,8 +42,13 @@ class Login_GUI:
         self.password_entry = Entry(self.third_container, width=40)
         self.password_entry.pack(side=RIGHT, pady=10)
 
-        #bottons part
+        #buttons part
+        def clear_window():
+            for widget in root.winfo_children():
+                widget.destroy()
+        #function to clear and appear Register gui
         def register():
+            clear_window()
             Register_GUI.Register_GUI()
 
         self.button_login = Button(self.fourth_container, width=20,height=2, text="LOGIN", font=("Verdana", "7", "bold"))
@@ -53,13 +58,12 @@ class Login_GUI:
         self.button_register.pack(padx=30)
 
 
-#FALTA CORREÇÃO DE ABERTURA PARA PARTE REGISTER
 
 
 root = Tk()
 width_screen = (root.winfo_screenwidth())
 height_screen = (root.winfo_screenheight())
-root.geometry("700x400")
+root.geometry("700x500")
 root.maxsize(width=width_screen, height=height_screen)
 root.minsize(width=800, height=500)
 root.title("Login")

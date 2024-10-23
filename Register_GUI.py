@@ -60,7 +60,3 @@ class Register_GUI:
         #button
         self.button_register = Button(self.sixth_container, width=20,height=2, text="REGISTER", font=("Verdana", "7", "bold"))
         self.button_register.pack(pady=30)
-
-
-        self.window = tk.Toplevel(master)
-        self.window.title("Register")
