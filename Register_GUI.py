@@ -3,7 +3,7 @@ from tkinter import ttk
 import tkinter as tk
 
 
-class Register_GUI:
+class Register:
     def __init__(self, master=None):
         #Containers
         self.first_container = Frame(master)

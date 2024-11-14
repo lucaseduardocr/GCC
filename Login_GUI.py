@@ -43,19 +43,27 @@ class Login_GUI:
         self.password_entry.pack(side=RIGHT, pady=10)
 
         #buttons part
+
+        def login():
+            from users_command import Login
+            login_instance = Login(self)
+            login_instance.login_verification()
+
         def clear_window():
             for widget in root.winfo_children():
                 widget.destroy()
         #function to clear and appear Register gui
         def register():
             clear_window()
-            Register_GUI.Register_GUI()
+            Register_GUI.Register()
+        
 
-        self.button_login = Button(self.fourth_container, width=20,height=2, text="LOGIN", font=("Verdana", "7", "bold"))
+        self.button_login = Button(self.fourth_container, width=20,height=2, text="LOGIN", font=("Verdana", "7", "bold"), command=login)
         self.button_login.pack(pady=5, padx=30)
 
         self.button_register = Button(self.fourth_container, width=20,height=2, text="REGISTER", font=("Verdana", "7", "bold"), command=register)
         self.button_register.pack(padx=30)
+          
 
 
 
